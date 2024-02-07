@@ -92,6 +92,11 @@ const Home = () => {
     );
 
     setUserDetailsArray(updatedUserDetailsArray);
+    alert('User Successfully Registered')
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
   };
 
   const label = { inputProps: { "aria-label": "Color switch demo" } };
