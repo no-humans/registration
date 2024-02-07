@@ -16,6 +16,8 @@ import FormGroup from "@mui/material/FormGroup";
 // import { Formik, Form, Field, ErrorMessage } from "formik";
 // import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from "@mui/material/Switch";
+import { useTheme } from '@mui/material/styles';
+
 
 const defaultTheme = createTheme();
 
@@ -100,10 +102,15 @@ const Home = () => {
   };
 
   const label = { inputProps: { "aria-label": "Color switch demo" } };
-
+  const theme = useTheme();
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container sx={{ marginLeft: "3rem" }} component="main" maxWidth="xs">
+      <Container  component="main"   maxWidth="xs"
+      sx={{
+        [theme.breakpoints.up('sm')]: {
+          marginLeft: '3rem',
+        },
+      }}>
         <CssBaseline />
         <Box
           sx={{
